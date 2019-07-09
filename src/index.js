@@ -16,10 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // makes new list element
     const newLi = document.createElement('li')
 
-    // changes inner text to todo, then appends to document ul tag
-    newLi.innerText = toDo
-    ulTag.appendChild(newLi)
-  })
+    // create delete button
+    deleteButton = document.createElement('button')
+    deleteButton.innerText = 'X'
 
+    // changes inner text of li to todo and append delete button
+    newLi.innerText = toDo
+    newLi.appendChild(deleteButton)
+
+    // Append toDo to unordered list
+    ulTag.appendChild(newLi)
+
+    // delete listener functionality
+    deleteButton.addEventListener("click", function(e) {
+      e.preventDefault();
+      ulTag.removeChild(newLi)
+    })
+
+  })
 
 });

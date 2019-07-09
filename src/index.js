@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
    		//Add to ulTag and push to tasks array
    		ulTag.innerHTML += `<li>${task} - Due: ${deadline}<button id="delete-task">X</button><hidden></li>`
    		ulTag.children[ulTag.children.length-1].dataset.priority = priority
-   		e.target.children[1].value = ""
+   		e.target.reset()
    		tasks.push(ulTag.children[ulTag.children.length-1])
 
    		//Handle text styling according to priority

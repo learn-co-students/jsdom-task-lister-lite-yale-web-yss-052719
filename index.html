@@ -12,7 +12,13 @@
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
-      <input type="submit" value="Create New Task">
+      <input type="number" id="new-task-time" name="new-task-time" placeholder="Time required (minutes)">
+      <select class="priority-level" name="priority" id="priority-answer">
+        <option value="High Priority">High Priority</option>
+        <option value="Medium Priority">Medium Priority</option>
+        <option value="Low Priority">Low Priority</option>
+      </select>
+      <input type="submit" value="Create New Task" id="create-task">
     </form>
 
     <div id="list">

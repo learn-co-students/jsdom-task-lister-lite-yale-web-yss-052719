@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // input box tag
   const inputTag = document.querySelector("input")
 
+  const selectTag = document.querySelector("select")
+  
   // ADD TASKS
 
   formTag.addEventListener("submit", function(e) {
@@ -22,6 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // changes inner text of li to todo and append delete button
     newLi.innerText = toDo
+
+    // Priority Logic
+    if (selectTag.value === "Low") {
+      newLi.style.color = 'green'
+    }
+    else if (selectTag.value === "Medium") {
+      newLi.style.color = 'yellow'
+    }
+    else if (selectTag.value === "High") {
+      newLi.style.color = 'red'
+    }
+
     newLi.appendChild(deleteButton)
 
     // Append toDo to unordered list

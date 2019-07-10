@@ -6,12 +6,20 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div id="main-content">
+  <div id="main-content" style="text-align: center">
     <h1>Task Lister Lite™️</h1>
 
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <br>
+      <label for="priority">Priority:</label>
+      <select id="priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <br>
       <input type="submit" value="Create New Task">
     </form>
 
@@ -19,7 +27,10 @@
       <h2>My Todos</h2>
       <ul id="tasks">
       </ul>
+      <button class="sort" style="font-size: 11px">Sort Tasks by Priority</button>
     </div>
+
+
 
     <script src="./src/index.js"></script>
   </div>
